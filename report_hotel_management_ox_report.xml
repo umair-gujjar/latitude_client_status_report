@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<openerp>
+    <data>
+        <report
+            auto="False" 
+            id="client_status_report" 
+            model="client.status.report.mod" 
+            name="latitude_report.client_status_report" 
+            file="latitude_report.client_status_report"
+            report_type="qweb-pdf"
+            string="Client Status Report"/> 
+
+    </data>
+</openerp>

@@ -1,0 +1,1 @@
+# latitude_client_status_report

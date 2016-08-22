@@ -1,0 +1,17 @@
+<openerp>
+    <data>
+
+        <record id="latitude_print_report_button_view" model="ir.ui.view">
+            <field name="name">latitude_print_report_button_view</field>
+            <field name="model">project.task</field>
+            <field name="inherit_id" ref="project.view_task_form2"/>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+            	<header>
+            		<button name="action_print_report_client_status" type="object" string="Client Status Report" />
+            	</header>
+            </field>
+        </record>
+
+    </data>
+</openerp>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+<data>
+<template id="client_oxenlab_status_report">
+    <t t-call="report.html_container">
+        <t t-call="report.external_layout">
+            <div class="page">
+                <table class="table">
+                    <thead>
+                        <tr class="text-center">
+                            <!--<th>Sr No.</th>-->
+                            <th>Client Name</th> 
+                            <th>Task Name</th>
+                            <th>Last Description</th>
+                            <th>Current Description</th>
+                            <th>Description</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody> 
+                        <t t-set="i" t-value="1"/>
+                        <t t-foreach="get_projects()" t-as="project">  
+                        <tr style="font-weight: bold;"> 
+                            <td colspan="7">
+                                <span t-field="project.name"/>
+                            </td>
+                        </tr> 
+                        <tr t-foreach="get_data(project)" t-as="data"> 
+                            <!--<td>
+                                <t t-esc="i"/>
+                                <t t-set="i" t-value="i+1"/>
+                            </td>-->
+                            <td>
+                            </td>
+                            <td>
+                                <span t-esc="data['task_name']"/>
+                            </td>
+                            <td>
+                                <span t-esc="data['last_desc']"/>
+                            </td>
+                            <td>
+                          		<span t-esc="data['current_desc']"/>
+                            </td>
+                            <td>
+                                <span t-esc="data['description']"/>
+                            </td>
+                            <td>
+                                <span t-esc="data['status']"/>
+                            </td>
+                        </tr> 
+                        </t>
+        
+                    </tbody>
+                </table>  
+            </div>
+        </t>
+    </t>
+</template>
+</data>
+</openerp>
