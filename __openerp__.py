@@ -15,11 +15,10 @@
 
     # always loaded
     'data': [
-        # 'security/ir.model.access.csv',
+        
         'templates.xml',
         'report_hotel_management_ox_report.xml',
-        #'views/report_hotel_management_ox_report.xml',
-        'views/departure_report.xml',
-        #'wizard/hotel_oxenlab_view.xml',
+        'views/client_status_report.xml',
+        
     ],
 }
