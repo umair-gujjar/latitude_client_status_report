@@ -17,7 +17,7 @@
     'data': [
         
         'templates.xml',
-        'report_hotel_management_ox_report.xml',
+        'report_client_status_ox_report.xml',
         'views/client_status_report.xml',
         
     ],
