@@ -5,9 +5,12 @@
     <t t-call="report.html_container">
         <t t-call="report.external_layout">
             <div class="page">
+                <p class="text-center" style="font-weight: bold; background-color: #f4a424; font-size: 15px;">
+                            Weekly Meeting Report : <t t-esc="get_date()"></t>
+                </p>
                 <table class="table">
                     <thead>
-                        <tr class="text-center">
+                        <tr class="text-center" style="font-weight: bold; background-color: #0077dd; font-size: 15px;">
                             <!--<th>Sr No.</th>-->
                             <th>Client Name</th> 
                             <th>Task Name</th>
@@ -20,7 +23,7 @@
                     <tbody> 
                         <t t-set="i" t-value="1"/>
                         <t t-foreach="get_projects()" t-as="project">  
-                        <tr style="font-weight: bold;"> 
+                        <tr style="font-weight: bold; background-color: #D3D3D3; font-size: 15px;"> 
                             <td colspan="7">
                                 <span t-field="project.name"/>
                             </td>

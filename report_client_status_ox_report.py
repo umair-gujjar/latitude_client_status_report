@@ -34,9 +34,15 @@ class client_status_report(report_sxw.rml_parse):
             'time': time,
             'get_data': self.get_data,
             'get_projects': self.get_projects,
+            'get_date': self.get_date,
         })
 
         self.context = context
+
+    def get_date(self):
+        today = datetime.today()
+        edate = today.strftime('%d, %b %Y')
+        return edate     
 
     def get_projects(self):
         recsss = self.pool.get('project.project').search(self.cr,self.uid, [], context=self.context)
