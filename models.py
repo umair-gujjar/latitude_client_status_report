@@ -29,3 +29,13 @@ class project_task_model_inherit(models.Model):
         res = res and res[0] or {}
         datas.update({'form':res})
         return self.pool['report'].get_action(cr, uid, ids, 'latitude_report.client_status_report', data=datas, context=context)
+
+    def action_print_friday_report_client_status(self, cr, uid, ids, context=None):
+        if context is None:
+            context = {}
+        #datas = {'ids': context.get('active_ids', [])}
+        datas = {'ids': uid}
+        res = self.read(cr, uid, ids, context=context)
+        res = res and res[0] or {}
+        datas.update({'form':res})
+        return self.pool['report'].get_action(cr, uid, ids, 'latitude_report.client_status_friday_report', data=datas, context=context)

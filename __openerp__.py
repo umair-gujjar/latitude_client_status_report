@@ -19,6 +19,7 @@
         'templates.xml',
         'report_client_status_ox_report.xml',
         'views/client_status_report.xml',
+        'views/client_status_friday_report.xml',
         
     ],
 }

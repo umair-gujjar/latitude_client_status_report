@@ -2,13 +2,19 @@
 <openerp>
     <data>
         <report
-            auto="False" 
-            id="client_status_report" 
-            model="client.status.report.mod" 
+            id="action_client_status_report" 
+            model="project.task" 
             name="latitude_report.client_status_report" 
             file="latitude_report.client_status_report"
             report_type="qweb-pdf"
-            string="Client Status Report"/> 
+            string="Client Status Monday Report"/> 
 
+        <report
+            id="action_client_status_friday_report" 
+            model="project.task" 
+            name="latitude_report.client_status_friday_report" 
+            file="latitude_report.client_status_friday_report"
+            report_type="qweb-pdf"
+            string="Client Status Friday Report"/>    
     </data>
 </openerp>

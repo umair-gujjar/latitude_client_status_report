@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <openerp>
 <data>
-<template id="client_status_report">
+<template id="client_status_friday_report">
     <t t-call="report.html_container">
         <t t-call="report.external_layout">
             <div class="page">
-                <p class="text-center" style="font-weight: bold; background-color: #f4a424; font-size: 15px;">
-                            Weekly Meeting Report : <t t-esc="get_date()"></t>
+                <p style="font-weight: bold; background-color: #f4a424; font-size: 15px;"> <span>Name : <t t-esc="get_name()"></t></span>
+                    <span class="pull-right">Wednesday Meeting Report : <t t-esc="get_date()"></t></span>
                 </p>
                 <table class="table">
                     <thead>
@@ -17,6 +17,7 @@
                             <th>Last Description</th>
                             <th>Current Description</th>
                             <th>Description</th>
+                            <th>Time</th>
                             <th>Status</th>
                         </tr>
                     </thead>
@@ -46,6 +47,9 @@
                             </td>
                             <td>
                                 <span t-esc="data['description']"/>
+                            </td>
+                            <td>
+                                <span t-esc="data['time']"/>
                             </td>
                             <td>
                                 <span t-esc="data['status']"/>
